@@ -3,10 +3,12 @@ $dsn = 'pgsql:host=training2025-db-instance-1.c25mkwu8gg8k.us-east-1.rds.amazona
 $user = 'furutaa';
 $password = 'training2025-furutaa';
 
-try{
-    header('Context-Type: text/html; charset=UTF-8');
-    $pdo = new PDO($dns, $user, $password);
+$error = '';
+$success = '';
 
+try{
+    header('Content-Type: text/html; charset=UTF-8');
+    $pdo = new PDO($dsn, $user, $password);
     //GETクエリからIDを取得
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $id = $_GET["id"] ?? '';
