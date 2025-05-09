@@ -3,9 +3,6 @@ $dsn = 'pgsql:host=training2025-db-instance-1.c25mkwu8gg8k.us-east-1.rds.amazona
 $user = 'furutaa';
 $password = 'training2025-furutaa';
 
-$error = '';
-$success = '';
-
 try{
     header('Context-Type: text/html; charset=UTF-8');
     $pdo = new PDO($dns, $user, $password);
