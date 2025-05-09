@@ -41,8 +41,9 @@ try{
                 $success = 'コメントが正常に追加されました。';
         
                 //コメントを追加した後にリダイレクト
-                header('"Location: ".$_SERVER['PHP_SELF']');
-                exit;   //リダイレクト後は処理を終了
+                header("Location: " . $_SERVER['PHP_SELF']);
+                exit;
+
                     
             }catch(PDOException $e){
                 $error = 'コメントの追加に失敗しました:'.$e->getMessage();
