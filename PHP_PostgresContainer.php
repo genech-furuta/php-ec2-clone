@@ -75,12 +75,12 @@ try{
     //各行をテーブルの行として表示
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<tr>";
-        echo "<td>" . htmlspecialchars($row['id']) . "</td>";
+        //echo "<td>" . htmlspecialchars($row['id']) . "</td>";
         echo "<td>" . htmlspecialchars($row['comment']) . "</td>";
         echo "<td>" . htmlspecialchars($row['created_by']) . "</td>";
         echo "<td>" . htmlspecialchars($row['created_at']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['updated_at'] ?? '') . "</td>";
-        echo "<td>" . htmlspecialchars($row['deleted_at'] ?? '') . "</td>";
+        //echo "<td>" . htmlspecialchars($row['updated_at'] ?? '') . "</td>";
+        //echo "<td>" . htmlspecialchars($row['deleted_at'] ?? '') . "</td>";
         //updateボタン
         echo "<td>
             <form action='update.php' method='GET'>
@@ -97,12 +97,12 @@ try{
             </td>";
             }
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        echo $row['id']."\n";
+        //echo $row['id']."\n";
         echo $row['comment']."\n";
         echo $row['created_by']."\n";
         echo $row['created_at']."\n";
-        echo $row['updated_at']."\n";
-        echo $row['deleted_at']."\n";
+        // echo $row['updated_at']."\n";
+        // echo $row['deleted_at']."\n";
   
     }
 }catch(PDOException $e){
@@ -111,10 +111,12 @@ try{
     
 ?>
 
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset = "UTF-8">
+
         <h2>コメント入力</h2>
         <?php if ($error): ?><p style = "color:red;"><?php echo htmlspecialchars($error); ?></p><?php endif; ?>
         
@@ -122,10 +124,11 @@ try{
         <form method = "post" action = "">
             <label>名前<input type = "text" name = "username" required></label>
             <br><br>
-            <label>コメント</label>
+            <label style = "color:blue">コメント</label>
+            <br><br>
             <textarea name="comment" cols="50" rows="10"></textarea>
             <br><br>
-            <input class = "button" type = "submit" value = "OK">
+            <input class = "button" type = "submit" value = "OK" style ="color: green">
             <br>
         </form>
     </head>
