@@ -62,12 +62,9 @@ try{
     echo "<h1>Postsテーブルのデータ</h1>";
     echo "<table border='1' style='border-collapse: collapse;'>";
     echo "<tr>
-    <th>ID</th>
     <th>comment</th>
     <th>created_by</th>
     <th>created_at</th>
-    <th>updated_at</th>
-    <th>deleted_at</th>
     <th>update</th>
     <th>delete</th>
     </tr>";
