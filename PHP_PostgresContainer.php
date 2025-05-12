@@ -64,7 +64,6 @@ try{
     echo "<tr>
     <th>comment</th>
     <th>created_by</th>
-    <th>created_at</th>
     <th>update</th>
     <th>delete</th>
     </tr>";
@@ -75,7 +74,7 @@ try{
         //echo "<td>" . htmlspecialchars($row['id']) . "</td>";
         echo "<td>" . htmlspecialchars($row['comment']) . "</td>";
         echo "<td>" . htmlspecialchars($row['created_by']) . "</td>";
-        echo "<td>" . htmlspecialchars($row['created_at']) . "</td>";
+        //echo "<td>" . htmlspecialchars($row['created_at']) . "</td>";
         //echo "<td>" . htmlspecialchars($row['updated_at'] ?? '') . "</td>";
         //echo "<td>" . htmlspecialchars($row['deleted_at'] ?? '') . "</td>";
         //updateボタン
@@ -97,7 +96,7 @@ try{
         //echo $row['id']."\n";
         echo $row['comment']."\n";
         echo $row['created_by']."\n";
-        echo $row['created_at']."\n";
+        //echo $row['created_at']."\n";
         // echo $row['updated_at']."\n";
         // echo $row['deleted_at']."\n";
   
